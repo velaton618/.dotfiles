@@ -14,7 +14,7 @@ vim.wo.cursorline = true
 
 -- Clipboard
 -- vim.opt.clipboard:append {'unnamedplus'} -- Linux
-vim.opt.clipboard:append({"unnamed"}) -- MacOS
+vim.opt.clipboard:append({ "unnamed" }) -- MacOS
 vim.opt.termguicolors = true
 
 vim.cmd([[colorscheme kanagawa-paper]])
@@ -30,3 +30,7 @@ vim.api.nvim_exec2(
 ]],
 	{ output = false }
 )
+
+-- list chars
+vim.opt.list = true
+vim.opt.listchars = { tab = "| ", trail = "·", nbsp = "␣" }
