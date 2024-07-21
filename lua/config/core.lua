@@ -9,6 +9,9 @@ vim.o.expandtab = true
 
 vim.o.mouse = "a"
 
+-- Highlight current line
+vim.wo.cursorline = true
+
 -- Clipboard
 -- vim.opt.clipboard:append {'unnamedplus'} -- Linux
 vim.opt.clipboard:append({"unnamed"}) -- MacOS
