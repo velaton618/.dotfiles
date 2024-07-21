@@ -45,10 +45,10 @@ vim.api.nvim_create_autocmd("LspAttach", {
 	end,
 })
 
-local lsp_capabilities = require("cmp_nvim_lsp").default_capabilities()
-
-require("lspconfig").tsserver.setup({ capabilities = lsp_capabilities })
-require("lspconfig").rust_analyzer.setup({ capabilities = lsp_capabilities })
+-- local lsp_capabilities = require("cmp_nvim_lsp").default_capabilities()
+--
+-- require("lspconfig").tsserver.setup({ capabilities = lsp_capabilities })
+-- require("lspconfig").rust_analyzer.setup({ capabilities = lsp_capabilities })
 
 -- Disable autocommenting on new line
 vim.api.nvim_create_autocmd("BufEnter", {
@@ -71,7 +71,7 @@ vim.api.nvim_create_autocmd("BufEnter", {
 
 -- Tabsizes
 vim.api.nvim_create_autocmd("FileType", {
-	pattern = { "lua", "py", "rs", "html", "scss", "json" },
+	pattern = { "lua", "py", "rs", "html", "sass", "css", "scss", "json" },
 	callback = function()
 		vim.bo.tabstop = 4
 		vim.bo.shiftwidth = 4

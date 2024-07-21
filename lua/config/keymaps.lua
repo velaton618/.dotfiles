@@ -10,8 +10,8 @@ api.nvim_set_keymap("n", "ш", "i", { silent = true })
 api.nvim_set_keymap("n", "т", "n", { silent = true })
 api.nvim_set_keymap("n", "г", "u", { silent = true })
 
-api.nvim_set_keymap("i", "jj", "<Esc>l", { noremap = true, silent = true })
-api.nvim_set_keymap("i", "jk", "<Esc>l", { noremap = true, silent = true })
+api.nvim_set_keymap("i", "jj", "<Esc>", { noremap = true, silent = true })
+api.nvim_set_keymap("i", "jk", "<Esc>", { noremap = true, silent = true })
 
 api.nvim_set_keymap("n", "K", "<C-u>zz", { noremap = true, silent = true })
 api.nvim_set_keymap("n", "J", "<C-d>zz", { noremap = true, silent = true })
