@@ -30,7 +30,3 @@ vim.api.nvim_exec2(
 ]],
 	{ output = false }
 )
-
--- list chars
-vim.opt.list = true
-vim.opt.listchars = { tab = "| ", trail = "·", nbsp = "␣" }
