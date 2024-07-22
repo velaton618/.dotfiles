@@ -6,11 +6,11 @@ return {
 			winopts = {
 				fullscreen = true,
 				preview = {
-					-- layout = "vertial",
-					-- vertical = "down:60%",
+					layout = "vertial",
+					vertical = "down:60%",
 
-					layout = "horizontal",
-					horizontal = "right:60%",
+					-- layout = "horizontal",
+					-- horizontal = "right:60%",
 				},
 			},
 
