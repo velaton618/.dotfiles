@@ -59,29 +59,43 @@ vim.api.nvim_create_autocmd("BufEnter", {
 	end,
 })
 
--- Set tabsize to 4 for all inside guider folder at anywhere
-vim.api.nvim_create_autocmd("BufEnter", {
-	pattern = "**/guider/**",
-	callback = function()
-		vim.opt.softtabstop = 4
-		vim.opt.tabstop = 4
-		vim.opt.shiftwidth = 4
-	end,
-})
+-- -- Set tabsize to 4 for all inside guider folder at anywhere
+-- vim.api.nvim_create_autocmd("BufEnter", {
+-- 	pattern = "**/guider/**",
+-- 	callback = function()
+-- 		vim.opt.softtabstop = 4
+-- 		vim.opt.tabstop = 4
+-- 		vim.opt.shiftwidth = 4
+-- 	end,
+-- }
 
 -- Tabsizes
 vim.api.nvim_create_autocmd("FileType", {
-	pattern = { "lua", "py", "rs", "html", "sass", "css", "scss", "json" },
+	pattern = {
+		"lua",
+		"py",
+		"rs",
+		"html",
+		"sass",
+		"scss",
+		"json",
+		"typescript",
+		"javascript",
+		"typescriptreact",
+		"javascriptreact",
+	},
 	callback = function()
 		vim.bo.tabstop = 4
 		vim.bo.shiftwidth = 4
+		vim.bo.softtabstop = 4
 	end,
 })
-
-vim.api.nvim_create_autocmd("FileType", {
-	pattern = { "typescript", "javascript", "typescriptreact", "javascriptreact" },
-	callback = function()
-		vim.bo.tabstop = 2
-		vim.bo.shiftwidth = 2
-	end,
-})
+--
+-- vim.api.nvim_create_autocmd("FileType", {
+-- 	pattern = { "typescript", "javascript", "css", "typescriptreact", "javascriptreact" },
+-- 	callback = function()
+-- 		vim.bo.tabstop = 2
+-- 		vim.bo.shiftwidth = 2
+-- 		vim.bo.softtabstop = 2
+-- 	end,
+-- })

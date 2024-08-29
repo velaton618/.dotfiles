@@ -30,29 +30,29 @@ vim.keymap.set("n", "<leader>F", ":Neotree focus<cr>", { desc = "Focus NeoTree",
 -- Themery
 api.nvim_set_keymap("n", "<leader>tt", ":Themery<cr>", { silent = true })
 
--- local builtin = require("telescope.builtin")
--- vim.keymap.set("n", "<leader>ff", builtin.find_files, {})
--- vim.keymap.set("n", "<leader>fg", builtin.live_grep, {})
+local builtin = require("telescope.builtin")
+vim.keymap.set("n", "<leader>ff", builtin.find_files, {})
+vim.keymap.set("n", "<leader>fg", builtin.live_grep, {})
 
-local fzf = require("fzf-lua")
+-- local fzf = require("fzf-lua")
 
-local keymap = function(mode, lhs, rhs)
-	vim.keymap.set(mode, lhs, rhs, { noremap = true, silent = true })
-end
-
-keymap("n", "<leader>ht", fzf.help_tags)
-keymap("n", "<leader>hk", fzf.keymaps)
-
-keymap("n", "<leader>ff", fzf.files)
-keymap("n", "<leader>fg", fzf.grep_project)
-keymap("n", "<leader>po", fzf.oldfiles)
-keymap("n", "<leader>pp", fzf.buffers)
--- keymap("n", "<leader>/", fzf.grep_curbuf)
-
-keymap("n", "<leader>cw", fzf.grep_cword)
-keymap("n", "<leader>ccw", function()
-	fzf.lgrep_curbuf({ search = vim.fn.expand("<cword>") })
-end)
+-- local keymap = function(mode, lhs, rhs)
+-- 	vim.keymap.set(mode, lhs, rhs, { noremap = true, silent = true })
+-- end
+--
+-- keymap("n", "<leader>ht", fzf.help_tags)
+-- keymap("n", "<leader>hk", fzf.keymaps)
+--
+-- keymap("n", "<leader>ff", fzf.files)
+-- keymap("n", "<leader>fg", fzf.grep_project)
+-- keymap("n", "<leader>po", fzf.oldfiles)
+-- keymap("n", "<leader>pp", fzf.buffers)
+-- -- keymap("n", "<leader>/", fzf.grep_curbuf)
+--
+-- keymap("n", "<leader>cw", fzf.grep_cword)
+-- keymap("n", "<leader>ccw", function()
+-- 	fzf.lgrep_curbuf({ search = vim.fn.expand("<cword>") })
+-- end)
 
 -- save
 api.nvim_set_keymap("n", "<leader>w", ":w!<cr>", { silent = true })

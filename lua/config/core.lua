@@ -17,7 +17,8 @@ vim.wo.cursorline = true
 vim.opt.clipboard:append({ "unnamed" }) -- MacOS
 vim.opt.termguicolors = true
 
-vim.cmd([[colorscheme kanagawa-paper]])
+-- vim.cmd([[colorscheme kanagawa-paper]])
+vim.cmd([[colorscheme mellifluous]])
 
 -- Higligh on yank
 
